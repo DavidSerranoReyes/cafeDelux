@@ -84,7 +84,6 @@ main {
   text-align: center;
   width: 500px;
   background-color: #a19d85;
-
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar cada producto */
 }
@@ -106,17 +105,15 @@ main {
   font-size: 1.2rem;
   color: #2d2d2d;
 }
+
 .product2 {
   text-align: center;
   width: 500px;
   background-color: #a19d85;
-
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar cada producto */
 }
-.product2 img:hover {
-  transform: scale(1.05);
-}
+
 .product2 img {
   width: 100%;
   height: 200px;
@@ -124,6 +121,11 @@ main {
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
+
+.product2 img:hover {
+  transform: scale(1.05);
+}
+
 /* Contact form */
 form {
   display: flex;
@@ -222,28 +224,69 @@ footer {
   header {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
+  .logo h1 {
+    font-size: 1.5rem; /* Reducción del tamaño del logo */
+  }
+
+  nav ul {
+    flex-direction: column; /* Cambio de dirección para mejorar la visibilidad */
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+
+  /* Ajustar la visualización de los productos */
   .product-container {
     flex-direction: column;
     align-items: center;
   }
 
-  form {
-    width: 100%; /* El formulario se adapta mejor a pantallas pequeñas */
+  .product,
+  .product2 {
+    width: 100%;
+    max-width: 400px; /* Limitar el ancho de los productos */
+    margin-bottom: 1.5rem;
   }
-  @media (max-width: 768px) {
-    header .logo h1 {
-      font-size: 1.5rem; /* Reducción del tamaño del logo */
-    }
 
-    nav ul {
-      flex-direction: column; /* Cambio de dirección para mejorar la visibilidad */
-      align-items: center;
-    }
+  .product img {
+    height: auto; /* Las imágenes se adaptan mejor al tamaño de la pantalla */
+  }
 
-    nav li {
-      margin: 5px 0;
-    }
+  form {
+    width: 90%; /* El formulario se adapta mejor a pantallas pequeñas */
+  }
+
+  footer {
+    font-size: 0.9rem; /* Ajuste de tamaño de texto en pie de página */
+  }
+
+  .whatsapp-btn {
+    bottom: 15px; /* Ajuste de posición para el botón de WhatsApp */
+    right: 15px;
+    padding: 15px;
+  }
+
+  .whatsapp-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product img {
+    height: 300px; /* Ajuste de altura para pantallas más pequeñas */
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 0.9rem;
   }
 }
